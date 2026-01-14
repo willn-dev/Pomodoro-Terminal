@@ -1,0 +1,15 @@
+START WITH A MINIMUM VIABLE PRODUCT
+
+
+
+25 mins followed by 5 mins.
+pause in between the 25 mins end and break, with a press any key
+to start your break. 
+same with return to 25 mins. 
+
+
+during 5 minutes graphic will be set to break. 
+
+using Rich:
+Colorful text, tables, progress bars, formatted output
+use rich livedisplay feature
