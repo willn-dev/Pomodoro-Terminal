@@ -13,3 +13,5 @@ during 5 minutes graphic will be set to break.
 using Rich:
 Colorful text, tables, progress bars, formatted output
 use rich livedisplay feature
+
+do I want to use pyfiglet for the number display?
