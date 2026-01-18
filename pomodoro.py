@@ -1,10 +1,12 @@
 import time
+from playsound3 import playsound
 from pyfiglet import Figlet
 from rich.align import Align
 from rich.console import Console
 from rich.live import Live
 from rich.layout import Layout
 from rich.text import Text
+
 
 console = Console()
 layout = Layout()
@@ -27,6 +29,23 @@ console.print("\n" * 3)  # top spacing
 layout["title"].update(Align.center(titlebar))
 layout["stop"].update(Align.center(Text("press ctrl-c to quit", style="dim")))
 
+
+def main():
+    while True:
+        start()
+        console.clear()
+        console.print("\n" * 6)
+        playsound("sounds/timerend.mp3")
+        console.print(Align.center(Text("Great job! Work session complete. Press enter to start a break", style="bold cyan")))
+        input()
+
+        break_time()
+        console.clear()
+        console.print("\n" * 6)
+        playsound("sounds/timerend.mp3")
+        console.print(Align.center(Text("Break finished. Press enter to go back to work.", style="bold cyan")))
+        input()
+
 def start():
     total_seconds = 1500
 
@@ -39,7 +58,18 @@ def start():
             layout["timer"].update(Align.center(format_time(mins, secs)))
 
             total_seconds -= 1 
-        if total_seconds = 0:
+
+
+def break_time():
+    total_seconds = 300
+    with Live(layout, console=console, refresh_per_second=4) as live:
+        while total_seconds > 0: 
+            mins = total_seconds // 60
+            secs = total_seconds % 60
+
+            time.sleep(1)
+            layout["timer"].update(Align.center(format_time(mins, secs)))
+            total_seconds -= 1 
 
 
 def format_time(mins, secs):
@@ -51,4 +81,4 @@ def format_time(mins, secs):
 
 
 if __name__ == ("__main__"):
-    start()
+    main()
