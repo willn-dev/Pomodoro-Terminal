@@ -24,7 +24,17 @@ The original technique has six steps:
 # Usage:
 
 The app uses 25:5min intervals.
-Simply run the command in terminal `pomo-start`, to begin your timer.
+Simply run the command in terminal `pomo-term`, to begin your timer.
 After each timer ends, there is a small chime sound to alert you that it has finished.
 
 # Installation. 
+
+clone the repo using `git clone https://github.com/willn-dev/Pomodoro-Terminal.git`
+
+cd into the folder, and run the installation script
+`./install.sh` 
+
+> *note: Dont ever run a script that you dont trust. The installation script has every line commented so you can understand whats happening*
+
+Now you should be able to run `pomo-term` from any directory to start.
+
