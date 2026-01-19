@@ -27,3 +27,4 @@ The app uses 25:5min intervals.
 Simply run the command in terminal `pomo-start`, to begin your timer.
 After each timer ends, there is a small chime sound to alert you that it has finished.
 
+# Installation. 
