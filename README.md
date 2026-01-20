@@ -38,3 +38,10 @@ cd into the folder, and run the installation script
 
 Now you should be able to run `pomo-term` from any directory to start.
 
+# Uninstalling
+```bash
+rm -rf ~/.local/lib/pomo-term ~/.local/bin/pomo-term
+```
+
+You can also delete the cloned repository if you no longer need it.
+it will be wherever you initially executed the git clone command from
