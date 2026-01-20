@@ -1,5 +1,5 @@
 # Pomodoro-Terminal
-CLI pomodoro timer for MacOS with system notifications.
+CLI pomodoro timer for MacOS
 _____
 
 # What is a Pomodoro timer? 
