@@ -1,4 +1,4 @@
-import time
+import os
 from playsound3 import playsound
 from pyfiglet import Figlet
 from rich.align import Align
@@ -6,11 +6,11 @@ from rich.console import Console
 from rich.live import Live
 from rich.layout import Layout
 from rich.text import Text
-
+import time
 
 console = Console()
 layout = Layout()
-
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 isofont = Figlet(font="larry3d")
 fontapply = isofont.renderText("pomo-term")
@@ -30,19 +30,20 @@ layout["title"].update(Align.center(titlebar))
 layout["stop"].update(Align.center(Text("press ctrl-c to quit", style="dim")))
 
 
+
 def main():
     while True:
         start()
         console.clear()
         console.print("\n" * 6)
-        playsound("sounds/timerend.mp3")
+        playsound(os.path.join(SCRIPT_DIR, "sounds/timerend.mp3"))
         console.print(Align.center(Text("Great job! Work session complete. Press enter to start a break", style="bold cyan")))
         input()
 
         break_time()
         console.clear()
         console.print("\n" * 6)
-        playsound("sounds/timerend.mp3")
+        playsound(os.path.join(SCRIPT_DIR, "sounds/timerend.mp3"))
         console.print(Align.center(Text("Break finished. Press enter to go back to work.", style="bold cyan")))
         input()
 
